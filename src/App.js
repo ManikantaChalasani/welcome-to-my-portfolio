@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import ButtonsSection from './ButtonsSection';
+import Footer from './Footer';
+import Resume from './navcom/Resume';
+import Education from './navcom/Education';
+import Projects from './navcom/Projects';
+import Skills from './navcom/Skills';
+import ProfileSection from './ProfileSection'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        {/* The Home component is always displayed */}
+        <Home />
+        
+        {/* The ProfileSection should only appear on the home page, not with other routes */}
+        <Routes>
+          {/* Use the exact path for home */}
+          <Route path="/" element={<ProfileSection />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+        
+        {/* Button Section is always displayed */}
+        <ButtonsSection />
+        
+        {/* Footer is always displayed */}
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

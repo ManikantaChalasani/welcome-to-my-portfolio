@@ -1,0 +1,142 @@
+/* General styles for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* Logo styles */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .branch {
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Styles for the navigation toggle button */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  /* Styles for the navigation menu */
+  .nav {
+    display: flex;
+    flex-direction: row;
+    transition: max-height 0.4s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .nav.open {
+    display: flex;
+    max-height: 300px; /* Adjust height as needed */
+  }
+  
+  /* Styles for the navigation links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    transition: color 0.3s;
+    position: relative;
+  }
+  
+  /* Link styles */
+  .nav-links a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color 0.3s, transform 0.2s;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  /* Hover effects for links */
+  .nav-links a:hover {
+    color: #007bff;
+    transform: scale(1.05);
+  }
+  
+  /* Active link indicator */
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s, left 0.3s;
+  }
+  
+  /* When hovered or active, show underline */
+  .nav-links a:hover::after,
+  .nav-links a:focus::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav {
+      display: none; /* Hide menu by default on smaller screens */
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav.open {
+      display: flex; /* Display menu when open */
+      max-height: none;
+    }
+  
+    .nav-toggle {
+      display: block; /* Show the toggle button on smaller screens */
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-links li {
+      margin: 1rem 0;
+    }
+  }
+  
