@@ -252,7 +252,7 @@ body {
 }
 
 /* Hover effect for the 3D look */
-.btech :hover {
+.btech:hover{
   transform: translateY(-20px);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4), 
               0 15px 20px rgba(0, 0, 0, 0.3);
@@ -268,7 +268,7 @@ body {
 }
 
 /* Text styling */
-.btech h2 {
+.hi:hover {
   font-size: 22px;
   margin-bottom: 15px;
 }
@@ -287,7 +287,7 @@ body {
 }
 
 /* Hover effect for the 3D look */
-.dip :hover {
+.dip:hover{
   transform: translateY(-20px);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4), 
               0 15px 20px rgba(0, 0, 0, 0.3);
@@ -302,8 +302,8 @@ body {
 }
 
 /* Text styling */
-.dip h2 {
-  font-size: 22px;
+ .hl{
+
   margin-bottom: 15px;
 }
 .tenth {
@@ -321,7 +321,7 @@ body {
 }
 
 /* Hover effect for the 3D look */
-.tenth :hover {
+.tenth:hover {
   transform: translateY(-20px);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4), 
               0 15px 20px rgba(0, 0, 0, 0.3);
@@ -337,8 +337,119 @@ body {
 }
 
 /* Text styling */
-.tenth h2 {
+.tenth  {
   font-size: 22px;
   margin-bottom: 15px;
 }
+
+.skills-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.skill-image {
+  flex: 1;
+  text-align: center;
+}
+
+.skill-image img {
+  max-width: 400px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.skill-content {
+  flex: 1;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+.project-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.project-links {
+  margin-top: 10px;
+}
+
+.project-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+.resume-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.resume-buttons {
+  margin-top: 20px;
+}
+
+.resume-button {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+  background-color: #0056b3;
+}
+
 

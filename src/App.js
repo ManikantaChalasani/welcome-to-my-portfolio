@@ -17,6 +17,7 @@ function App() {
         {/* The Home component is always displayed */}
         <Home />
         
+        
         {/* The ProfileSection should only appear on the home page, not with other routes */}
         <Routes>
           {/* Use the exact path for home */}
